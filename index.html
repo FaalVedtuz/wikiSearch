@@ -1,22 +1,25 @@
 <!DOCTYPE html>
 <html>
-  <head>
+
+<head>
     <meta charset="utf-8">
     <meta name="description" content="This is a project submission for freecodecamp challenge.">
     <meta name="author" content="Jayson Rondina">
     <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="style.css">
     <title>Wikipedia Viewer</title>
-  </head>
-  <body>
+</head>
+
+<body>
     <form id="searchForm" method="get">
-      <input id="search" type="text">
-      
+        <input id="search" type="text">
     </form>
-    <script
-			  src="https://code.jquery.com/jquery-3.2.1.min.js"
-			  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
-			  crossorigin="anonymous">
+    <section id="partial_results" class="partialResultContainer">
+
+    </section>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous">
     </script>
     <script type="text/javascript" src="wikisearch.js"></script>
-  </body>
+</body>
+
 </html>
