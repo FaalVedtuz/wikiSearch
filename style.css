@@ -1,6 +1,22 @@
 .partialResultContainer {
     display: none;
     position: relative;
-    max-width: 20%;
-    border: solid black 1px;
+    max-width: 30.85%;
+    border: solid #c8b7b7 1px;
+    border-top: none;
+}
+
+.resultContainer {
+    padding: 8px;
+}
+
+.resultContainer:hover {
+    background: #bdbdbd;
+}
+
+#search {
+    width: 30%;
+    padding: 5px;
+    border-radius: 3px;
+    border: 1px solid #c8b7b7;
 }

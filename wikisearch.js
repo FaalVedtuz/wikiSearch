@@ -17,7 +17,7 @@ $(function() {
                 clearPartialResult();
                 if (wikiQ !== "") {
                     for (var i = 0; i < data[1].length; i++) {
-                        $("#partial_results").append("<p><a href=" + data[3][i] + ">" + data[1][i] + "</a></p>");
+                        $("#partial_results").append("<a href=" + data[3][i] + "><div class='resultContainer'>" + data[1][i] + "</div></a>");
                     }
                     $("#partial_results").fadeIn("fast");
                 } else {
@@ -25,13 +25,13 @@ $(function() {
                 }
             },
             error: function(req, errStat, errMsg) {
-                console.log("Sorry there has been a problem. Error: " + errStat + req);
+                console.log("Sorry there has been a problem." + errStat + req);
             }
         });
-    };
+    }
 
     function clearPartialResult() {
-        $("#partial_results p").remove();
+        $(".resultContainer").remove();
     }
     //remove suggestion box when click outside of the suggestion container
     $("body").click(function(e) {
@@ -39,11 +39,9 @@ $(function() {
         e.stopPropagation();
     });
 
-    $("#searchForm").keyup(function(e) {
-        //e.preventDefault();
+    $("#searchForm").keyup(function() {
         wikiQ = $("#search").val();
         fetchData(wikiQ);
     });
-
 
 }); // document.ready end
